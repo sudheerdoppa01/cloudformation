@@ -4,7 +4,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: ami-0187337106779cdf8
-      KeyName: leo
+      KeyName: ${file(config/config.${opt:stage}.yml):keyname}
       InstanceType: t2.micro
       Tags:
         - Key: Name
@@ -14,7 +14,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: ami-0187337106779cdf8
-      KeyName: leo
+      KeyName: ${file(config/config.${opt:stage}.yml):keyname}
       InstanceType: t2.micro
       Tags:
         - Key: Name
