@@ -1,0 +1,11 @@
+service: cloudformation-infra-creation
+frameworkVersion: '3'
+configValidationMode: error
+provider:
+  name: aws
+  deploymentMethod: direct
+  region: ap-south-1
+  deploymentPrefix: resource
+resources:
+  - ${file(./resources/ec2.yml)}
+  # - ${file(./resources/ssmParameters.yml)}
