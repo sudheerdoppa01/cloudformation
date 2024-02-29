@@ -9,3 +9,10 @@ Resources:
       Tags:
         - Key: Name
           Value: My-Ec2-instance
+
+  MyECRRepository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: my-ecr-repository
+      ImageScanningConfiguration:
+        scanOnPush: true
