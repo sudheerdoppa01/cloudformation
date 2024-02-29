@@ -6,6 +6,6 @@ Resources:
       ImageId: "ami-0187337106779cdf8"
       KeyName: "leo"
       InstanceType: "t2.micro"
-      Tags:
-        - key: name
-          Value: My-Ec2-instance
+    Tags:
+      key: name
+      Value: My-Ec2-instance
