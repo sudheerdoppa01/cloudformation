@@ -3,9 +3,9 @@ Resources:
   MyEC2Instance: 
     Type: AWS::EC2::Instance
     Properties: 
-      ImageId: "ami-0187337106779cdf8"
-      KeyName: "leo"
-      InstanceType: "t2.micro"
+      ImageId: ami-0187337106779cdf8
+      KeyName: leo
+      InstanceType: t2.micro
       Tags:
-        - key: Name
+        - Key: Name
           Value: My-Ec2-instance
