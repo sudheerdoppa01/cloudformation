@@ -8,4 +8,4 @@ provider:
   deploymentPrefix: resource
 resources:
   - ${file(./resources/ec2.yml)}
-  # - ${file(./resources/ssmParameters.yml)}
+  - ${file(./resources/parameters.yml)}
