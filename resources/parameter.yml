@@ -1,0 +1,21 @@
+---
+Resources:
+  MyParameter:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/MyApp/MyParameter1'
+      Type: 'String'
+      Value: 'MyParameterValue'
+      Description: 'Description of my parameter'
+      Tier: 'Standard'
+
+  MyParameter2:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/MyApp/MyParameter2'
+      Type: 'String'
+      Value: 'MyParameterValue'
+      Description: 'Description of my parameter'
+      Tier: 'Standard'
+
+  

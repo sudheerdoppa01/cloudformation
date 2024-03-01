@@ -3,6 +3,33 @@ Resources:
   MyEC2Instance: 
     Type: AWS::EC2::Instance
     Properties: 
-      ImageId: "ami-0187337106779cdf8"
-      KeyName: "leo"
-      InstanceType: "t2.micro"
+      ImageId: ami-0187337106779cdf8
+      KeyName: ${file(config/config.${opt:stage}.yml):keyname}
+      InstanceType: t2.micro
+      Tags:
+        - Key: Name
+          Value: My-Ec2-instance
+
+  MyEC2Instance1: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: ami-0187337106779cdf8
+      KeyName: ${file(config/config.${opt:stage}.yml):keyname}
+      InstanceType: t2.micro
+      Tags:
+        - Key: Name
+          Value: My-Ec2-instance-1
+
+  MyECRRepository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: my-ecr-repository
+      ImageScanningConfiguration:
+        scanOnPush: true
+
+  MyECRRepository1:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: my-ecr-repository-1
+      ImageScanningConfiguration:
+        scanOnPush: true
