@@ -9,7 +9,7 @@ Resources:
       Description: 'Description of my parameter'
       Tier: 'Standard'
 
-  MyParameter2:
+  MyParameter3:
     Type: 'AWS::SSM::Parameter'
     Properties:
       Name: '/MyApp/MyParameter2'
